@@ -9,9 +9,7 @@ export default function Home() {
       <div className="flex flex-1">
         <aside className="w-72 bg-zinc-950 p-6">
         <div className='flex itens-center gap-2'>
-         <div className='w-3 h-3 bg-red-500 rounded-full'/>
-         <div className='w-3 h-3 bg-yellow-500 rounded-full'/>
-         <div className='w-3 h-3 bg-green-500 rounded-full'/>
+        <div className='rounded overflow-hidden'> <Image src='/Spotify_Logo_CMYK_Green.png' width={120} height={120}  alt="Capa da playlist"/></div>
         </div>
 
           <nav className='space-y-5 mt-10'>
@@ -55,13 +53,13 @@ export default function Home() {
 
           <h1 className='font-semibold text-3xl mt-10'>Good Afternoon</h1>
 
-          <div className='grid grid-cols-3 gap-4'>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/1.png' width={80} height={80}  alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/2.png' width={80} height={80} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/3.png' width={80} height={80} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/4.png' width={80} height={80} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/5.png' width={80} height={80} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/7.png' width={80} height={80} alt="Capa da playlist"/></div>
+          <div className='grid grid-cols-3 gap-4 mt-4' >
+            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/1.png' width={120} height={120}  alt="Capa da playlist"/></div>
+            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/2.png' width={120} height={120} alt="Capa da playlist"/></div>
+            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/the.png' width={120} height={120} alt="Capa da playlist"/></div>
+            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/4.png' width={120} height={120} alt="Capa da playlist"/></div>
+            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/5.png' width={120} height={120} alt="Capa da playlist"/></div>
+            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/6.png' width={120} height={120} alt="Capa da playlist"/></div>
           </div>
         </main>
 
