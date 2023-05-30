@@ -1,65 +1,115 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import {Home as HomeIcon, Search, Library} from 'lucide-react'
-import Image from 'next/image';
+import Sidebar from "@/components/sidebar";
+import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { Home as HomeIcon, Search, Library } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
 
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-950 p-6">
-        <div className='flex itens-center gap-2'>
-        <div className='rounded overflow-hidden'> <Image src='/Spotify_Logo_CMYK_Green.png' width={120} height={120}  alt="Capa da playlist"/></div>
-        </div>
-
-          <nav className='space-y-5 mt-10'>
-            <a href="" className='flex items-center gap-3 text-sm  font-semibold text-zinc-200'>
-              <HomeIcon />
-              Home
-            </a>
-
-            <a href="" className='flex items-center gap-3  text-sm  font-semibold text-zinc-200'>
-              <Search />
-              Search
-              </a>
-
-            <a href="" className='flex items-center gap-3  text-sm  font-semibold text-zinc-200'>
-              <Library />
-              Your Library
-              </a>
-          </nav>
-
-        <nav className='mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-3'>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>Hot Hit Brasil</a>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>Daily Mix 1</a>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>Night Drive</a>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>Made in France</a>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>Modern Psychedelia</a>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>SoulFul Nights</a>
-          <a href=''className='text-sm text-zinc-400 hover:text-zinc-100'>Indie Rock Hits</a>
-        </nav>
-        </aside>
+        <Sidebar/>
 
         <main className="flex-1 p-6">
-          <div className='flex items-center gap-4'>
-            <button className='rounded-full bg-black/40 p-1'>
-                <ChevronLeft/>
+          <div className="flex items-center gap-4">
+            <button className="rounded-full bg-black/40 p-1">
+              <ChevronLeft />
             </button>
-            <button className='rounded-full bg-black/40 p-1'>
-              <ChevronRight/>
+            <button className="rounded-full bg-black/40 p-1">
+              <ChevronRight />
             </button>
           </div>
 
+          <h1 className="font-semibold text-3xl mt-10">Good Afternoon</h1>
 
-          <h1 className='font-semibold text-3xl mt-10'>Good Afternoon</h1>
-
-          <div className='grid grid-cols-3 gap-4 mt-4' >
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/1.png' width={120} height={120}  alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/2.png' width={120} height={120} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/the.png' width={120} height={120} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/4.png' width={120} height={120} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/5.png' width={120} height={120} alt="Capa da playlist"/></div>
-            <div className='bg-white/10 rounded overflow-hidden'> <Image src='/6.png' width={120} height={120} alt="Capa da playlist"/></div>
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            <a
+              href="#"
+              className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1.png"
+                width={104}
+                height={104}
+                alt="Capa da playlist"
+              />
+              <strong>Daily Mix</strong>{" "}
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-white ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/2.png"
+                width={104}
+                height={104}
+                alt="Capa da playlist"
+              />
+              <strong>Daily Mix 3</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/the.png"
+                width={104}
+                height={104}
+                alt="Capa da playlist"
+              />
+              <strong>After Hours</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/4.png"
+                width={104}
+                height={104}
+                alt="Capa da playlist"
+              />
+              <strong>Indie Rock</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/5.png"
+                width={104}
+                height={104}
+                alt="Capa da playlist"
+              />
+              <strong>Night Drive</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors"
+            > 
+              <Image
+                src="/6.png"
+                width={104}
+                height={104}
+                alt="Capa da playlist"
+              />
+              <strong>HomeComing</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">                <Play />
+              </button>
+            </a>
           </div>
         </main>
 
